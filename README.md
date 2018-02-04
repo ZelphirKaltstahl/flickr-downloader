@@ -2,8 +2,8 @@
 
 * Python 3.6
 * a flickr account user id
-* a flickr API key
-* a flickr API secret
+* a flickr API key (You can get your API key from <https://www.flickr.com/services/apps/create/>.)
+* a flickr API secret (You can get your API secret from <https://www.flickr.com/services/apps/create/>.)
 
 # Usage
 
