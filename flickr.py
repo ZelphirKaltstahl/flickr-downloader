@@ -157,14 +157,15 @@ def download_image_from_url(
     photo_name,
     url
 ):
-    print(f"downloading image from: {url}")
-
     dir_path = build_dir_path(photoset_name, photo_name)
     file_path = build_file_path(photoset_name, photo_name, url)
-    create_directory_if_not_exists(dir_path)
-
-    with open(file_path, mode="wb") as image_file:
-        image_file.write(urllib.request.urlopen(url).read())
+    if os.path.isfile(file_path):
+        print(f"[INFO]: file already exists, skipping {file_path}.")
+    else:
+        print(f"[INFO]: downloading image from: {url}")
+        create_directory_if_not_exists(dir_path)
+        with open(file_path, mode="wb") as image_file:
+            image_file.write(urllib.request.urlopen(url).read())
 
 
 def get_photoset_infos(all_sets):
