@@ -99,3 +99,10 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+# other
+secret
+
+# other
+secret
+example_request_parameters.txt
